@@ -1,31 +1,60 @@
 <template>
-    <div class="warp">
-        <ListComponent />
-    </div>
+  <v-app>
+    <v-app-bar
+      app
+      color="primary"
+      dark
+    >
+      <div class="d-flex align-center">
+        <v-img
+          alt="Vuetify Logo"
+          class="shrink mr-2"
+          contain
+          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+          transition="scale-transition"
+          width="40"
+        />
+
+        <v-img
+          alt="Vuetify Name"
+          class="shrink mt-1 hidden-sm-and-down"
+          contain
+          min-width="100"
+          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
+          width="100"
+        />
+      </div>
+
+      <v-spacer></v-spacer>
+
+      <v-btn
+        href="https://github.com/vuetifyjs/vuetify/releases/latest"
+        target="_blank"
+        text
+      >
+        <span class="mr-2">Latest Release</span>
+        <v-icon>mdi-open-in-new</v-icon>
+      </v-btn>
+    </v-app-bar>
+
+    <v-content>
+      <HelloWorld/>
+    </v-content>
+  </v-app>
 </template>
 
 <script>
-    import ListComponent from './components/ListComponent'
+import HelloWorld from './components/HelloWorld';
 
-    export default {
-        name: "app",
-        components: {
-            ListComponent
-        }
-    }
+export default {
+  name: 'App',
 
-    // 서버 기동 시 기본 Sample 파일 저장 후 시작
-    let initData = {
-        1: {id: 1, content: 'Hello', regDated: '2019-01-01'},
-        2: {id: 2, content: 'hhhhh', regDated: '2019-02-01'},
-        3: {id: 3, content: 'ggggg', regDated: '2019-03-01'},
-        4: {id: 4, content: 'ooooo', regDated: '2019-04-01'},
-        5: {id: 5, content: 'qqqqq', regDated: '2019-05-01'},
-        6: {id: 6, content: 'asdasd', regDated: '2019-08-01'},
-    };
-    localStorage.setItem("http://localhost:8080", JSON.stringify(initData))
+  components: {
+    HelloWorld,
+  },
+
+  data: () => ({
+    //
+  }),
+};
 </script>
-
-<style>
-
-</style>
