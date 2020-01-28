@@ -1,10 +1,11 @@
 import VueRouter from "vue-router";
 import Login from "../components/Login";
+import Home from "../components/Home";
 
 export default new VueRouter({
     mode: 'history',
     routes: [
-        { path: '/', component: { template: '<div>Home</div>' } },
+        { path: '/', component: Home },
         { path: '/login', component: Login },
         { path: '/logout', component: { template: '<div>Logout</div>' } },
         { path: '/posts', component: { template: '<div>Posts</div>' } },
