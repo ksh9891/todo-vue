@@ -1,0 +1,17 @@
+server:
+  port: 8001
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:todo
+    driver-class-name: org.h2.Driver
+    username: sh_todo
+    password: asdqwe12#
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create-drop
+  h2:
+    console:
+      enabled: true
+
