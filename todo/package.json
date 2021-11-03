@@ -11,7 +11,7 @@
     "axios": "^0.19.2",
     "core-js": "^3.4.4",
     "es6-promise": "^4.2.8",
-    "validator": "^12.2.0",
+    "validator": "^13.7.0",
     "vue": "^2.6.10",
     "vue-router": "^3.1.5",
     "vuetify": "^2.1.0",
